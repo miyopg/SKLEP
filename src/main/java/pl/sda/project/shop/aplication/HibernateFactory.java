@@ -9,9 +9,9 @@ import pl.sda.project.shop.model.Oil;
 public class HibernateFactory {
     private Configuration getHibernateConfig() {
         Configuration configuration = new Configuration();
-        configuration.setProperty("hibernate.connection.url", "jdbc:hsqldb:file:db-data/mydatabase;hsqldb.write_delay_millis=0");
-        configuration.setProperty("hibernate.connection.username", "admin123");
-        configuration.setProperty("hibernate.connection.password", "admin123");
+        configuration.setProperty("hibernate.connection.url", "jdbc:postgres://cwqnkqsn:PdWTvI74W6fqE0__aBzRVXomLI8Y34Zg@tyke.db.elephantsql.com/cwqnkqsn");
+        configuration.setProperty("hibernate.connection.username", "cwqnkqsn");
+        configuration.setProperty("hibernate.connection.password", "PdWTvI74W6fqE0__aBzRVXomLI8Y34Zg");
         configuration.setProperty("hibernate.dialect", "org.hibernate.dialect.HSQLDialect");
         configuration.setProperty("hibernate.connection.driver_class", "org.hsqldb.jdbc.JDBCDriver");
         configuration.setProperty("hibernate.hbm2ddl.auto", "update");
