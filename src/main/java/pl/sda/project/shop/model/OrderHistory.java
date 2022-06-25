@@ -17,9 +17,4 @@ public class OrderHistory {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     protected Long id;
     protected LocalDate date;
-    @ManyToOne
-    private Oil oils;
-    @ManyToOne
-    private Customer customers;
-
 }

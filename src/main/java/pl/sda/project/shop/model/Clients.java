@@ -12,8 +12,7 @@ import java.util.Set;
 @NoArgsConstructor
 @ToString
 
-
-public class Customer {
+public class Clients {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,10 +24,7 @@ public class Customer {
     protected String street;
     protected String postCode;
     protected String city;
-    @OneToMany(mappedBy = "customers")
-    protected Set<Oil> boughtOils;
-    @OneToMany(mappedBy = "customer")
-    protected Set<OrderHistory> ordersSet;
+
 
 
 }
