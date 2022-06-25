@@ -14,7 +14,7 @@ import java.util.Set;
 @Getter
 @NoArgsConstructor
 @ToString
-public class Oil {
+public class Oils {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,10 +24,6 @@ public class Oil {
     protected Integer capacity;
     protected BigDecimal price;
     protected Integer quantity;
-    @ManyToOne
-    private Customer customers;
-    @OneToMany(mappedBy = "oils")
-    protected Set<OrderHistory> ordersSet;
 
 
 }

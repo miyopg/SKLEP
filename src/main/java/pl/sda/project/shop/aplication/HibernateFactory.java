@@ -4,21 +4,21 @@ import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
-import pl.sda.project.shop.model.Oil;
+import pl.sda.project.shop.model.Oils;
 
 public class HibernateFactory {
     private Configuration getHibernateConfig() {
         Configuration configuration = new Configuration();
-        configuration.setProperty("hibernate.connection.url", "jdbc:postgres://cwqnkqsn:PdWTvI74W6fqE0__aBzRVXomLI8Y34Zg@tyke.db.elephantsql.com/cwqnkqsn");
-        configuration.setProperty("hibernate.connection.username", "cwqnkqsn");
-        configuration.setProperty("hibernate.connection.password", "PdWTvI74W6fqE0__aBzRVXomLI8Y34Zg");
-        configuration.setProperty("hibernate.dialect", "org.hibernate.dialect.HSQLDialect");
-        configuration.setProperty("hibernate.connection.driver_class", "org.hsqldb.jdbc.JDBCDriver");
+        configuration.setProperty("hibernate.connection.url", "jdbc:mysql://localhost:3306/sdashop");
+        configuration.setProperty("hibernate.connection.username", "root");
+        configuration.setProperty("hibernate.connection.password", "0987");
+        configuration.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQLDialect");
+       // configuration.setProperty("hibernate.connection.driver_class", "com.mysql.jdbc.Driver");
         configuration.setProperty("hibernate.hbm2ddl.auto", "update");
 //		configuration.setProperty("hibernate.show_sql", "true");
 
 
-        configuration.addAnnotatedClass(Oil.class);
+        configuration.addAnnotatedClass(Oils.class);
 
 
         return configuration;
